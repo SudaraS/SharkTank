@@ -9,9 +9,10 @@ canvas.height = 400;
 
 let packets = [];
 let ipCount = {};
-const ATTACK_THRESHOLD = 20; // Define a limit for DDoS detection
+const ATTACK_THRESHOLD = 5; // Define a limit for DDoS detection
 
 ipcRenderer.on("packet-data", (event, data) => {
+    console.log("Packet data received:", data);
     const [src, dst, size] = data.split("\t");
     if (!src || !dst) return;
 
@@ -32,7 +33,7 @@ function drawPackets() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     packets.forEach((packet, index) => {
-        ctx.fillStyle = packet.size > 1000 ? "red" : "green"; // Large packets in red
+        ctx.fillStyle = packet.size > 1000 ? "red" : "Maroon"; // Large packets in red
         ctx.beginPath();
         ctx.arc(packet.x, packet.y, 5, 0, Math.PI * 2);
         ctx.fill();

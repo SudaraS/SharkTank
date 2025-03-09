@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packet Visualizer</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
-        #alert { color: red; font-size: 20px; display: none; }
-        canvas { background-color: black; width: 100%; height: 400px; }
     </style>
 </head>
 <body>
@@ -15,5 +14,12 @@
     <canvas id="networkCanvas"></canvas>
     <p id="alert">⚠️ Possible DDoS Attack Detected! ⚠️</p>
     <script src="renderer.js"></script>
+
+    <img src="aquatic.png" alt="Icon" class="icon">
+    <img src="aquatic.png" alt="Icon" class="icon4">
+    <img src="aquatic2.png" alt="Icon" class="icon2">
+    <img src="aquatic2.png" alt="Icon" class="icon3">
+
+    <audio id="soundEffect" src="alarm.mp3" loop autoplay></audio>
 </body>
 </html>

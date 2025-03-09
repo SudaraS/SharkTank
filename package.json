@@ -8,8 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "electron": "^35.0.0"
-  }
+  },
+  "description": ""
 }
