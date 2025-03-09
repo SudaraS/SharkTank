@@ -9,7 +9,7 @@ canvas.height = 400;
 
 let packets = [];
 let ipCount = {};
-const ATTACK_THRESHOLD = 20; // Define a limit for DDoS detection
+const ATTACK_THRESHOLD = 5; // Define a limit for DDoS detection
 
 ipcRenderer.on("packet-data", (event, data) => {
     const [src, dst, size] = data.split("\t");
